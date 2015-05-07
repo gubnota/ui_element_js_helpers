@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-GB">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-GB">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+<html lang="en-GB">
+<!--<![endif]-->
+<head>
+	<title>Demo for 'ui_element_js_helpers/jquery-through-script' Gubnota project</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+/* <![CDATA[ */
+html {min-height: 150%;margin: 0; padding: 0;}
+body {margin: 30px; font: 13px/1.5 "Trebuchet MS", Tahoma, Arial;background: #666;}
+a {color: #fff;}
+p {padding: 7px 0;}
+h1 {font-size: 21px; font-weight: normal; margin: 0 0 30px;word-wrap: break-word;color: #fff}
+blockquote{font-size: 15px; color: #666;}
+blockquote:before, blockquote:after{display: inline-block;font: 39px/1 "Trebuchet MS", Tahoma, Arial; color: #aaa;text-shadow:0 1px 0 #999;vertical-align: middle;}
+blockquote:before {content: "“";margin-right: 10px;}
+blockquote:after {content: "”";margin-left: 10px;}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+/* ]]> */
+</style>
+</head>
+
+<body>
+<div class="wrap">
+<h1>Return back to Github repo page: &laquo;<a href="https://github.com/gubnota/ui_element_js_helpers/blob/master/README.md">https://github.com/gubnota/ui_element_js_helpers/blob/master/README.md</a>&raquo;</h1>
+<h2>Please, scroll down then scroll again towards top</h2> 
+</div><script>(function(f,e,n,k,i){
+	if(!e.getElementById('through_plugin_script'))
+	      {var n=e.createElement(n),y=e.getElementsByTagName(i)[0];n.setAttribute('id','through_plugin_script');n.async=1;n.src=k;y.appendChild(n);n.onload = function() {
+var t = setInterval(function(){var $ = window.jQuery; if ($ && $.fn.through){clearInterval(t);
+$(".wrap").through('h1,h2','animated zoomIn');console.log('run')
+}},500);
+}}
+	})(window,document,'script','./through_plugin.js','head');
+</script>
+	<script type="text/javascript" src="../jquery-tabs-script/jquery-2.1.3.min.js" async defer></script>
+</body>
+</html>

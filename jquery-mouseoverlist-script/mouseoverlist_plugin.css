@@ -1,0 +1,100 @@
+.block{min-height: 200px;background: #666;margin: 0 auto;padding: 50px 20px; text-align:center;max-width: 960px;float:none;overflow: hidden}
+.block h2{font-size:2.25rem;color:#fff;text-shadow: 0 0 15px rgba(0,0,0,.6)}
+.mouseoverlist.active .opened .text{color:#605d5d}
+.mouseoverlist{display:table;margin:45px -20px;width:980px;height:235px;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-backface-visibility:hidden}
+@media all and (max-width:960px)
+{.mouseoverlist
+{width:748px;height:190px;margin:45px -10px}
+}
+
+.mouseoverlist .item
+{height:154px;display:table-cell;vertical-align:top;width:188px;-webkit-transition:width .37s;transition:width .37s;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-backface-visibility:hidden}
+@media all and (max-width:960px)
+{.item
+{width:146px}
+}
+.mouseoverlist .item-wrap
+{position:relative}
+.mouseoverlist.active .item
+{width:144px}
+@media all and (max-width:960px)
+{.mouseoverlist.active .item
+{width:110px}
+}
+.mouseoverlist.active .active
+{width:407px}
+@media all and (max-width:960px)
+{.mouseoverlist.active .active
+{width:325px}
+}
+/*.mouseoverlist .opened .icon {padding:2px;box-sizing:border-box; background-color: #f0f0f0;border-radius: 50%;}
+.mouseoverlist .closed .icon {border:3px solid #f0f0f0;border-radius: 50%;}
+*/.mouseoverlist .opened
+{position:absolute;left:50%;top:0;display:inline-block;opacity:0;visibility:hidden;height:150px;width:150px;margin-left:-75px;border-radius:75px;background-color:#fff;-webkit-transform:translate3d(0,0,0);-webkit-transition:all .37s;transition:all .37s;text-align:left;overflow:hidden}
+@media all and (max-width:960px)
+{.mouseoverlist .opened
+{height:114px;width:114px;margin-left:-57px;border-radius:57px}
+}
+.mouseoverlist.active .active .opened
+{width:376px;margin-left:-188px;opacity:1;visibility:visible;z-index:1}
+@media all and (max-width:960px)
+{.mouseoverlist.active .active .opened
+{width:300px;margin-left:-150px}
+}
+.mouseoverlist .item .closed
+{display:inline-block;visibility:visible;opacity:1;width:100%;text-align:center;-webkit-transition:opacity .37s;transition:opacity .37s;-webkit-transform:translate3d(0,0,0)}
+.mouseoverlist.active .active .closed
+{opacity:0;visibility:hidden}
+.mouseoverlist .title
+{visibility:visible;font-size:1.25rem;color:#fff;-webkit-transition:all .37s;transition:all .37s;margin:0 auto;width:100%;max-width:186px;font-weight:400;-webkit-backface-visibility:hidden}
+@media all and (max-width:960px)
+{.mouseoverlist .title
+{font-size:.9375rem;max-width:144px}
+}
+.mouseoverlist.active .title
+{-ms-transform:scale(.7);transform:scale(.7);-webkit-transform:scale(.7);text-shadow:none;max-width:142px}
+@media all and (max-width:940px)
+{.mouseoverlist.active .title
+{-ms-transform:scale(.8);transform:scale(.8);-webkit-transform:scale(.8);max-width:110px}
+}
+.mouseoverlist.active .active .title
+{visibility:hidden}
+.subtitle
+{display:none;width:190px;margin:18px 0 0px;padding-right:30px;font-size:1.125rem;font-weight:400;color:#000}
+@media all and (max-width:960px)
+{.subtitle
+{width:145px;margin:14px 0 7px;line-height:1rem;font-size:.9375rem}
+}
+.subtitle_hoverable_yes:hover
+{color:#d00}
+.mouseoverlist .active .subtitle
+{display:inline-block}
+.text
+{display:none;width:205px;font-size:1rem;margin:0}
+@media all and (max-width:960px)
+{.text
+{width:160px;font-size:.75rem}
+}
+.mouseoverlist .active .text
+{display:inline-block}
+.mouseoverlist .icon
+{display:inline-block;-webkit-transition:all .37s;transition:all .37s;height:150px;width:150px;margin-bottom:15px}
+.mouseoverlist .icon img {width:100%}
+.mouseoverlist.active .opened .icon
+{height:110px;width:110px;float:left;margin:20px}
+@media all and (max-width:960px)
+{.mouseoverlist .icon
+{width:112px;height:112px;margin:14px}
+}
+.mouseoverlist.active .icon
+{height:110px;width:110px;margin:20px 0 5px}
+@media all and (max-width:960px)
+{.mouseoverlist.active .icon
+{width:85px;height:85px;margin-top:14px}
+}
+.mouseoverlist.active .actived
+{margin:20px}
+@media all and (max-width:960px)
+{.mouseoverlist.active .actived
+{margin:14px}
+}
