@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Plugin cbh</title>
+<style>body{background:#eee;}
+.blue_btn {
+  padding: 3px 7px 5px;
+  background: #00aadd;
+  color: #fff;
+  margin: 0;
+  cursor: pointer;
+  border: 0;
+  width: 280px;
+  font-family: ArianAMUBold,"Arial Bold","Impact",Arial;
+  box-shadow: 0 -3px 0 rgba(0,0,0,0.4) inset;
+  border-radius: 6px;
+  display:inline-block
+}
+h1,h2,h3{color:#002266;text-align: center;}
+div{text-align: center;}
+li,ul,p,span,pre {text-shadow: 1px 1px 0 #fff;font-weight: bold;color:#002266;  font-family: ArianAMUBold,"Arial Bold","Impact",Arial;text-align: center;
+}
+ul{display: inline;}
+body {
+  font: 12px/18px Arial, sans-serif;
+    background: #999;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+</style>
+<script src=http://localhost/p/cdn/jquery/jquery-2.1.3.min.js></script>
+<script src="./cbh.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<h1>Плагин callme</h1>
+<div style="text-align:center;padding-top:10px">
+<div class="blue_btn callme_viewform">Открыть</div>
+</div>
+<h2>Структура плагина</h2>
+<ul>
+	<li>проверка на мульти-инициализацию</li>
+	<li>css инъектор</li>
+	<li>html инъектор</li>
+	<li>js логика событий</li>
+	<li>серверная часть по отправке</li>
+</ul>
+
+<div id="clbh_bt_placeholder1" style="position:absolute;top:128px;right:30%">
+  <script>Cbh.button({'state':'hover','color':'green'});</script>
+</div>
+
+<div id="clbh_bt_placeholder2" style="position:absolute;bottom:128px;left:30%">
+  <script>Cbh.button({'state':'static','color':'green'});</script>
+</div>
+
+<div id="clbh_bt_placeholder3" style="position:absolute;top:8px;left:4px">
+  <script>Cbh.button({'state':'hover','color':'gray'});</script>
+</div>
+
+<div id="clbh_bt_placeholder4" style="position:absolute;top:28px;right:20%">
+  <script>Cbh.button({'state':'active','color':'green'});</script>
+</div>
+
+<script>
+// (function(w){var t = setInterval(function(){if (w.jQuery && w.jQuery(w).width()>=0){clearInterval(t);
+Cbh.init({id:3,lang:'ru',detect_locale:false});
+//Cbh.help();
+//}},500);})(window);
+</script>
+</div>
+</body>
+</html>
