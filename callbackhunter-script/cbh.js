@@ -137,7 +137,7 @@ var t = $('#clbh_today').html()||"today",
 }// иначе если есть тел - end
 
 });
-$(document).on('click touchstart', "#clbh_exit", function(e){close_cbh_bg(e)});
+$(document).on('click touchend', "#clbh_exit", function(e){close_cbh_bg(e)});
 $(document).on('click',".clbh_blur",function(e){close_cbh_bg(e)})//vm20150520
 $(document).on("keyup", function (e) {var code = e.keyCode || e.which;
     if(code == 27){//esc
