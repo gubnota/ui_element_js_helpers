@@ -98,11 +98,11 @@ console.log(options.lang);
 if (nextdate) {timezone += " "+dic[options.lang].tomorrow;}
 it={timezone:timezone,nextdate:nextdate,officehour:officehour,fromhour:fromhour,curhour:curhour,diff:diff,selecthours:selecthours};
 // отображать форму
-$(document).on('click touchstart touchend', ".cbh-ph-img-circle,.cbh-callback", function(e){show_cbh_form(e)});
+$(document).on('click touchend', ".cbh-ph-img-circle,.cbh-callback", function(e){show_cbh_form(e)});
 // курсор покидает мышь
 $(document).on('mousemove','body',function(e){if (e.clientY*2 < window.prevY) {if (undefined ==window.localStorage.getItem('triggeredY') || (parseInt(window.localStorage.getItem('triggeredY'))+36000*2<(new Date()).getTime())) {window.localStorage.setItem('triggeredY',(new Date()).getTime());show_cbh_form(e);}}window.prevY = e.clientY;});
 
-$(document).on('click touchend touchstart',"#clbh_send", function(e){
+$(document).on('click touchend',"#clbh_send", function(e){
 if(window.localStorage){
     var e = window.localStorage["cbh_db.entrance_page"]||"";
     if ((!e) && (document.referrer)) {
