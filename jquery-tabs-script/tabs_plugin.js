@@ -86,7 +86,7 @@ var TabsPlugin = (function() {
             'padding: 0 10px 0 10px;',
             'color: #777;',
             'cursor: pointer;',
-            'border: 1px solid transparent',
+            'border: 1px solid transparent;',
             'border-bottom: 1px solid #F9F9F9;',
             'position: relative;',
             '}',
