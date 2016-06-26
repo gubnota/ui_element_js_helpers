@@ -40,18 +40,18 @@ var TabsPlugin = (function() {
 
       function _event(){
       var t = setInterval(function(){if (window.jQuery){clearInterval(t);
-                  $('.tab_plugin ul.tabs').each(function() {
-                        if ($(this).find('li.current').length==0)
+                  jQuery('.tab_plugin ul.tabs').each(function() {
+                        if (jQuery(this).find('li.current').length==0)
                         {
-                              $(this).find('li:first').addClass('current').siblings().removeClass('current')
-                                          .parents('.tab_plugin').find('div.box').eq($(this).index()).fadeIn(150).siblings('div.box').hide();
+                              jQuery(this).find('li:first').addClass('current').siblings().removeClass('current')
+                                          .parents('.tab_plugin').find('div.box').eq(jQuery(this).index()).fadeIn(150).siblings('div.box').hide();
                         }
                   });
-                  $('.tab_plugin ul.tabs').each(function() {
-                        $(this).find('li').each(function(i) {
-                              $(this).click(function(){
-                                    $(this).addClass('current').siblings().removeClass('current')
-                                          .parents('.tab_plugin').find('div.box').eq($(this).index()).fadeIn(150).siblings('div.box').hide();
+                  jQuery('.tab_plugin ul.tabs').each(function() {
+                        jQuery(this).find('li').each(function(i) {
+                              jQuery(this).click(function(){
+                                    jQuery(this).addClass('current').siblings().removeClass('current')
+                                          .parents('.tab_plugin').find('div.box').eq(jQuery(this).index()).fadeIn(150).siblings('div.box').hide();
                               });
                         });
                   });
