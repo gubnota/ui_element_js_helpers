@@ -2,76 +2,150 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Plugin cbh</title>
-<style>body{background:#eee;}
-.blue_btn {
-  padding: 3px 7px 5px;
-  background: #00aadd;
-  color: #fff;
-  margin: 0;
-  cursor: pointer;
-  border: 0;
-  width: 280px;
-  font-family: ArianAMUBold,"Arial Bold","Impact",Arial;
-  box-shadow: 0 -3px 0 rgba(0,0,0,0.4) inset;
-  border-radius: 6px;
-  display:inline-block
-}
-h1,h2,h3{color:#002266;text-align: center;}
-div{text-align: center;}
-li,ul,p,span,pre {text-shadow: 1px 1px 0 #fff;font-weight: bold;color:#002266;  font-family: ArianAMUBold,"Arial Bold","Impact",Arial;text-align: center;
-}
-ul{display: inline;}
+	<title>Callbackhunter expanded window</title>
+  <link rel="stylesheet" href="./style.css" defer="true">
+	<!--<script type="text/javascript" src="/assets/js/jquery.min.js"></script>-->
+	<script src="../lib/jquery-2.2.4.min.js"></script>
+<style>
 body {
-  font: 12px/18px Arial, sans-serif;
-    background: #999;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+	font: 12px/18px Arial, sans-serif;
+    background: url("./bg_.jpg") no-repeat scroll center 0 #0E0A0B;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
 }
+* {margin: 0;padding: 0;}
+#wrapper {
+	width: 100%;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+h1{text-align: center;color: #ddd;}
 </style>
-<script src=../lib/jquery-2.1.3.min.js></script>
-<script src="./cbh.js"></script>
 </head>
 <body>
-<div id="wrapper">
-<h1>Плагин callme</h1>
-<div style="text-align:center;padding-top:10px">
-<div class="blue_btn callme_viewform">Открыть</div>
-</div>
-<h2>Структура плагина</h2>
-<ul>
-	<li>проверка на мульти-инициализацию</li>
-	<li>css инъектор</li>
-	<li>html инъектор</li>
-	<li>js логика событий</li>
-	<li>серверная часть по отправке</li>
-</ul>
-
-<div id="clbh_bt_placeholder1" style="position:absolute;top:128px;right:30%">
-  <script>Cbh.button({'state':'hover','color':'green'});</script>
+<div id="wrapper" class="">
+<h1>Callbackhunter expanded window</h1>
 </div>
 
-<div id="clbh_bt_placeholder2" style="position:absolute;bottom:128px;left:30%">
-  <script>Cbh.button({'state':'static','color':'green'});</script>
+<div id="clbh_div" class="clbh_banner-wrapper animated" style="display: none;">
+<div class="clbh_banner-line-wrapper" id="clbh_banner_pr_line_wrapper" style="display: none;">
+<div class="clbh_banner-pr-line-left-wrapper">
+<div class="clbh_banner-pr-line-left" id="clbh_banner_pr_line_left">
+</div>
+</div>
+<div class="clbh_banner-pr-line-right-wrapper">
+<div class="clbh_banner-pr-line-right" id="clbh_banner_pr_line_right">
+</div>
+</div>
+</div>
+<div class="clbh_banner" id="clbh_div_ban">
+<div class="clbh_banner-exit" id="clbh_exit">
+</div>
+<div class="clbh_banner-body">
+<div class="clbh_banner-h1" id="clbh_banner_h1">Давайте мы перезвоним вам <span id="clbh_today"> в рабочее время</span> <br>в <select id="clbh_night_hour">
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+</select> ч. <select id="clbh_night_minute">
+<option value="0">0</option>
+<option value="5">5</option>
+<option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="25">25</option>
+<option value="30">30</option>
+<option value="35">35</option>
+<option value="40">40</option>
+<option value="45">45</option>
+<option value="50">50</option>
+<option value="55">55</option>
+</select> мин<span id="clbh_tomorrow_text"></span>?</div>
+<div class="clbh_banner-choose-office" id="clbh_banner_choose_office" style="display:none;">
+</div>
+<div class="clbh_banner-form-row-1">
+<div class="clbh_banner-form" id="clbh_banner_content">
+<div class="clbh_banner-arrow">
+</div>
+<div class="clbh_phone_line" id="clbh_phone_line">
+<input class="clbh_banner-textbox" type="text" placeholder="Введите ваш телефон" id="clbh_phone" value="" maxlength="18">
+<button class="clbh_banner-button" id="clbh_send">Жду звонка!</button>
+<a class="clbh_mob_vk" href="//vk.com/" style="display:none"></a>
+</div>
+<div class="clbh_timer" style="display: none;">
+<p id="clbh_timer_result">03:59:59</p>
+</div>
+</div>
+</div>
+<div class="clbh_banner-form-row-2">
+<span id="clbh_stat">
+</span>
+</div>
+</div>
+<div class="clbh_banner-work-to" id="clbh_banner_work_to">
+<a id="clbh_banner_work_to_link" href="#">Повысьте конверсию сайта!</a>
+</div>
+</div>
+<div class="clbh_banner_bg" id="clbh_banner_bg" style="display: none;">
+</div>
 </div>
 
-<div id="clbh_bt_placeholder3" style="position:absolute;top:8px;left:4px">
-  <script>Cbh.button({'state':'hover','color':'gray'});</script>
-</div>
+<div id="clbh_phone_div1" class="cbh-phone cbh-green cbh-show cbh-hover cbh-callback" style="top: 128px; right: 30%;"><div class="cbh-ph-circle"></div><div class="cbh-ph-circle-fill"></div><div class="cbh-ph-img-circle"></div></div>
 
-<div id="clbh_bt_placeholder4" style="position:absolute;top:28px;right:20%">
-  <script>Cbh.button({'state':'active','color':'green'});</script>
-</div>
+<div id="clbh_phone_div1" class="cbh-phone cbh-green cbh-show cbh-static cbh-callback" style="bottom: 128px; left: 30%;"><div class="cbh-ph-circle"></div><div class="cbh-ph-circle-fill"></div><div class="cbh-ph-img-circle"></div></div>
 
+<div id="clbh_phone_div2" class="cbh-phone cbh-gray cbh-show cbh-static cbh-callback" style="top: 28px; left: 404px;"><div class="cbh-ph-circle"></div><div class="cbh-ph-circle-fill"></div><div class="cbh-ph-img-circle"></div></div>
+
+<div id="clbh_phone_div3" class="cbh-phone cbh-gray cbh-show cbh-hover cbh-callback" style="top: 8px; left: 4px;"><div class="cbh-ph-circle"></div><div class="cbh-ph-circle-fill"></div><div class="cbh-ph-img-circle"></div></div>
 <script>
-// (function(w){var t = setInterval(function(){if (w.jQuery && w.jQuery(w).width()>=0){clearInterval(t);
-Cbh.init({id:3,lang:'ru',detect_locale:false});
-//Cbh.help();
-//}},500);})(window);
+$(function(){
+var officetimezone = 8,
+date = new Date(), userhour = date.getHours(), // час в вашей зоне для даты date 
+officehour = date.getUTCHours()+officetimezone, // час в зоне GMT+8 для даты date
+diff = userhour-officehour,// нужно прибавить поправку к часам в офисе, чтобы получить локальное время
+starthour=9,//время начала работы
+endhour=18,//время конца работы
+nextdate = 0,//идентификатор след.дня
+selecthours='',//селекторы часов
+timezone = new Date().getTimezoneOffset()/-60//
+// diff = -15;
+// console.log(officehour, endhour, diff, userhour, timezone);
+if (officehour > endhour) {var fromhour = starthour; nextdate++;}
+else {var fromhour = officehour;}
+// if (endhour < fromhour) {fromhour = starthour;}
+for (var i = fromhour; i < endhour; i++) {
+if (i + diff > 23) {var curhour = diff + i - 24;}
+else if (i + diff < 0) {var curhour = diff + i + 24;nextdate=0;}
+else {var curhour = diff + i;}
+ selecthours +='<option value="'+curhour+'">'+curhour+"</option>";
+}
+// console.log(selecthours);
+$('#clbh_night_hour').html(selecthours);
+(timezone > -1) ? timezone = " (GMT+"+timezone+")" : timezone = " (GMT"+timezone+")";
+if (nextdate) {timezone += " завтра";}
+else {$('#clbh_today').html("сегодня");}
+$('#clbh_tomorrow_text').html(timezone);
+$(".cbh-ph-img-circle,.cbh-callback").on('click', function(e){
+$('#clbh_div').addClass("zoomInLeft").prop('style').display="";
+setTimeout(function(){$('#clbh_div').removeClass("zoomInLeft");$('#wrapper').addClass("clbh_blur");
+},1000);
+});
+
+$("#clbh_send,#clbh_exit").on('click', function(e){
+$('#clbh_div').addClass("zoomOutLeft");
+setTimeout(function(){$('#clbh_div').removeClass("zoomOutLeft").prop('style').display="none";$('#wrapper').removeClass("clbh_blur");
+},1000);
+});
+
+});
 </script>
-</div>
 </body>
 </html>
