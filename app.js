@@ -22,13 +22,13 @@ function fromDir(startPath,filter,callback){
 };
 
 console.log(['\033[1;32m', 'Searching for .html files', '\033[0m'].join(' '));
-fromDir('.',/\.css$/,function(filename){
+fromDir('.',/\.html$/,function(filename){
     console.log('-- found: ',filename);
     fs.readFile(filename, 'utf8', function (err,data) {
       if (err) {
         return console.log(err);
       }
-      let result = data.replace(/http:\/\//g, '//')
+      let result = data.replace(/https:\/\/github\.com\/gubnota\/ui_element_js_helpers\/blob\/master\/README\.md/g, '//gubnota.github.io/ui_element_js_helpers/')
       fs.writeFile(filename, result, 'utf8', function (err) {
          if (err) return console.log(err);
       });

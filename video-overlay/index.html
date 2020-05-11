@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Встроенное видео, файл №4 для сайта sarafan.coffee</title>
+    <title>Inline video</title>
 <style>
 body{background: #fff;
 padding: 0.1em 0.2em;
@@ -183,10 +183,10 @@ overflow: visible;}
 </head>
 <body>
 <div class="content">
-<h1>Встроенное видео, файл №4 для сайта sarafan.coffee</h1>
+<h1><a href="//gubnota.github.io/ui_element_js_helpers/">Back to the main page</a></h1>
 </div>
 <div class="b-timelapse-frame-container">
-<p>Пауза перед загрузкой 0.4 сек сделана нарочно, идея подсмотрена <a href="//www.kommersant.ru/projects/arctic" target="_blank">тут</a></p>
+<p>Pause before load is 0.4 s</p>
 <!--[if lt IE 9]><script>document.createElement('video');</script><![endif]--><div class="b-timelapse-frame" style="max-height:350px">
     <div class="b-timelapse-collage">
     <div class="b-timelapse-video">
@@ -196,12 +196,12 @@ overflow: visible;}
     </div>
     </div><script>if (navigator.appVersion.search(/MSIE [0-9]{1,2}.0/)==-1){(function(w){var t = setInterval(function(){if (w.jQuery && $(w).width()>=0){clearInterval(t);
 var autoplay = function() {
-  if($(w).scrollTop()+$(w).height()>($('body').position().top||0)){
+  // if($(w).scrollTop()+$(w).height()>($('body').position().top||0)){
 $("#bottom_video0").after('<video muted="muted" audio="muted" autoplay loop poster="./sarafan.coffee.4/sarafan_cafe_video.png" preload="false" style="margin-top:0px" id="bottom_video">'+
 '<source type="video/mp4" src="./sarafan.coffee.4/sarafan_bg.mp4" />'+
 '<source type="video/webm" src="./sarafan.coffee.4/sarafan_bg.webm" />'+
 '<a title="Download video" href="./sarafan.coffee.4/sarafan_bg.mp4"><img class="b-timelapse-image" alt="" src="./sarafan.coffee.4/sarafan_cafe_video.png" /></a></video>').remove();
-  }
+  // }
 };
 autoplay();
 $(w).scroll(autoplay);
