@@ -568,7 +568,7 @@ width:50px;
 }
 .clbh_mob_blur{
 filter:url("data:image/svg+xml;
-utf8,<svgxmlns=\'http://www.w3.org/2000/svg\'><filterid=\'blur\'><feGaussianBlurstdDeviation=\'3\'/></filter></svg>#blur");
+utf8,<svgxmlns=\'//www.w3.org/2000/svg\'><filterid=\'blur\'><feGaussianBlurstdDeviation=\'3\'/></filter></svg>#blur");
 }
 .clbh_mob_fb{
 background:url("data:image/png;

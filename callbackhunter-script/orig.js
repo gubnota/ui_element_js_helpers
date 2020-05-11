@@ -10,8 +10,8 @@ if (!! Cbh) return window.Cbh;
         officetimezone:8,
         css:[],
         css_path:"./style.css",
-        url:"http://fenki.net/callbackme/f.php",
-        send_url:"http://fenki.net/callbackme/send.php",
+        url:"//fenki.net/callbackme/f.php",
+        send_url:"//fenki.net/callbackme/send.php",
       messages:{
       }
     };
@@ -67,7 +67,7 @@ var t = $('#clbh_today').html()||"今天",
     i = App.Plugins.callme.id;
     jQuery.ajax({
         type: "GET",
-        url: "http://fenki.net/callbackme/ph.php",
+        url: "//fenki.net/callbackme/ph.php",
         data: {t:t,h:h,p:p,m:m,w:w,g:g,i:i,l:window.location.pathname||"неизвестно",d:window.location.hostname,r:r,e:e}
       }).done(function(d) {
         jQuery("#clbh_stat").append('<span id="clbh_stat"><div class="cbh_result"> <div class=c_success>'+d+"</div> </div></span>");

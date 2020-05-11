@@ -23,21 +23,21 @@ li,ul,p,span,pre {text-shadow: 1px 1px 0 #fff;font-weight: bold;color:#002266;  
 }
 ul{display: inline;}
 </style>
-<script src=http://localhost/p/cdn/jquery/jquery-2.1.3.min.js></script>
+<script src=../lib/jquery-2.2.4.min.js></script>
 <script src="./callme.js"></script>
 </head>
 <body>
-<h1>Плагин callme</h1>
+<h1>Plugin callme</h1>
 <div style="text-align:center;padding-top:10px">
-<div class="blue_btn callme_viewform">Открыть</div>
+<div class="blue_btn callme_viewform">Open</div>
 </div>
-<h2>Структура плагина</h2>
+<h2>Plugin structure</h2>
 <ul>
-	<li>проверка на мульти-инициализацию</li>
-	<li>css инъектор</li>
-	<li>html инъектор</li>
-	<li>js логика событий</li>
-	<li>серверная часть по отправке</li>
+	<li>i18n</li>
+	<li>css injector</li>
+	<li>html injector</li>
+	<li>js logic (aka Controller)</li>
+	<li>Server side (php script with sendmail and some restrictions on one IP address per time)</li>
 </ul>
 <script>
 // (function(w){var t = setInterval(function(){if (w.jQuery && w.jQuery(w).width()>=0){clearInterval(t);

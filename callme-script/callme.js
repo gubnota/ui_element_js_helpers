@@ -9,9 +9,9 @@ if (!! Callme) return window.Callme;
         id:0,
         css:[],
         css_path:"./templates/vk/style.css",
-        url:"http://fenki.net/callbackme/f.php",
+        url:"//fenki.net/callbackme/f.php",
         img:"./templates/vk/tab.png",///callme/templates/vk/tab.png
-        send_url:"http://fenki.net/callbackme/send.php",
+        send_url:"//fenki.net/callbackme/send.php",
       messages:{
         form_where_req:"Откуда запрос",
         traffic_source:"Источник трафика",

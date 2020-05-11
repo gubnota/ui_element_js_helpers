@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-GB">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-GB">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+<html lang="en-GB">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Document 1</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+/* <![CDATA[ */
+{margin: 0; padding: 0;}
+@-webkit-keyframes loading{
+0%{-webkit-transform:rotate(0deg) scale(0.1);opacity: 1;
+transform:rotate(0deg) scale(0.1)}50%{opacity:1;-webkit-transform:rotate(180deg) scale(0.1);
+transform:rotate(180deg) scale(0.1)}
+to{-webkit-transform:rotate(360deg) scale(0.1);opacity: 1;
+transform:rotate(360deg) scale(0.1)}
+}
+
+.loading{
+background: url(rotate.png) transparent no-repeat center center;
+    background-repeat: no-repeat;
+    background-size: contain;content: " ";
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -125px;
+    margin-top: -125px;
+-webkit-animation:loading 0.8s linear infinite;
+}
+.loader-bar {
+position: fixed;
+top: 0;
+left: 0;
+z-index: 40;
+opacity: 0;
+width:0px;
+height: 4px;
+background: #2AAA00;
+box-shadow: 0 0 10px rgba(00,182,00,0.7);
+transition-property: width;
+transition-duration: 0.8s;
+-webkit-transition: opacity 0.8s linear 0.8s;
+transition: opacity 0.8s linear 0.8s;
+-webkit-transition-property: width;
+-webkit-transition-duration: 0.8s;
+}
+.loader-bar.progress{width: 100%}
+
+body {margin: 30px; font: 13px/1.5 "Trebuchet MS", Tahoma, Arial;background: #f0f0f0;}
+a {color: #0094D6;}
+p {padding: 7px 0;}
+h1 {font-size: 21px; font-weight: normal; margin: 0 0 30px;word-wrap: break-word;}
+blockquote{font-size: 15px; color: #666;}
+blockquote:before, blockquote:after{display: inline-block;font: 39px/1 "Trebuchet MS", Tahoma, Arial; color: #aaa;text-shadow:0 1px 0 #999;vertical-align: middle;}
+blockquote:before {content: "“";margin-right: 10px;}
+blockquote:after {content: "”";margin-left: 10px;}
+/* ]]> */
+</style>
+</head>
+<body>
+<div id="content">
+<div id="loader-bar" class="loader-bar"></div>
+<div class="loading" onmouseover="onmouseover_func"></div>
+<h1>Document 1</h1>
+<a href="2.html">click here for load ‘Document 2’</a>
+<ol>
+	<li>d</li>
+</ol>
+</div>
+	<script>(function(f,e,n,k,i){
+	if(!e.getElementById('tabs_plugin_script'))
+	      {var n=e.createElement(n),y=e.getElementsByTagName(i)[0];n.setAttribute('id','ajax_load_script');n.async=1;n.src=k;y.appendChild(n);n.onload = function() {
+// 	AjaxLoad.init({
+//     loadingsrc : 'loading.gif',
+//     loadingdivid : 'content',
+//     search_class: 'searchform',
+//     track_analytics: true
+// }).loadPageInit("").set_watchers();
+	}}
+	})(window,document,'script','./ajax_load.js','head');
+	</script>
+	<script type="text/javascript" src="../lib/jquery-2.2.4.min.js" async defer></script>
+<script>
+var onmouseover_func = function(){
+$('#loader-bar').css({opacity:1}).addClass('progress');
+setTimeout(function(){$('#loader-bar').css({'opacity':0}).removeClass('progress');},1800);
+}
+setTimeout(onmouseover_func,400);
+</script>
+</body>
+</html>
